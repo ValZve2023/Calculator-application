@@ -26,7 +26,7 @@ public class CalculatorController {
             @RequestParam(name = "num1", required = false) Integer num1,
             @RequestParam(value = "num2", required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return "Оба аргумента обязательны!";
+            return "Оба аргумента обязательны! Введите второе значение.";
         }
         return calculatorService.plus(num1, num2);
     }
@@ -36,7 +36,7 @@ public class CalculatorController {
             @RequestParam(name = "num1", required = false) Integer num1,
             @RequestParam(name = "num2", required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return "Оба аргумента обязательны!";
+            return "Оба аргумента обязательны! Введите второе значение.";
         }
         return calculatorService.minus(num1, num2);
     }
@@ -46,7 +46,7 @@ public class CalculatorController {
             @RequestParam(name = "num1", required = false) Integer num1,
             @RequestParam(name = "num2", required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return "Оба аргумента обязательны!";}
+            return "Оба аргумента обязательны! Введите второе значение.";}
         return calculatorService.multiply(num1, num2);
     }
 
@@ -55,7 +55,7 @@ public class CalculatorController {
             @RequestParam(name = "num1", required = false) Integer num1,
             @RequestParam(name = "num2", required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return "Оба аргумента обязательны!";}
+            return "Оба аргумента обязательны! Введите второе значение.";}
         if (num2.equals(0)) {
             return "Деление на ноль запрещено!";
         }
